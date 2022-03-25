@@ -1,16 +1,28 @@
 class Product < ApplicationRecord
-    #Valitating fields
-    validates :title, :description, :image_url, :price, presence: true
+  has_many :line_items
 
-    #Validates that price is greater than or equal to 0.01
-    validates :price, numericality: { greater_than_or_equal_to: 0.01 }
+  before_destroy :ensure_not_referenced_by_any_line_item
+  #Valitating fields
+  validates :title, :description, :image_url, :price, presence: true
 
-    #Validates that the title is unique
-    validates :title, uniqueness: true
+  #Validates that price is greater than or equal to 0.01
+  validates :price, numericality: { greater_than_or_equal_to: 0.01 }
 
-    #Validates the URL for images
-    validates :image_url, allow_blank: true, format: {
-        with: %r{\.(gif|jpg|png|jpeg)\z}i,
-        message: 'Must be a URL for GIF, JPG, JPEG or PNG image.'
-    }
+  #Validates that the title is unique
+  validates :title, uniqueness: true
+
+  #Validates the URL for images
+  validates :image_url, allow_blank: true, format: {
+      with: %r{\.(gif|jpg|png|jpeg)\z}i,
+      message: 'Must be a URL for GIF, JPG, JPEG or PNG image.'
+  }
+
+  private
+  #Ensure that there are no line items refcerencing this product
+  def ensure_not_referenced_by_any_line_item
+    unless line_items.empty?
+      errors.add(:base, 'Line Items present')
+      throw :abort
+    end
+  end
 end
