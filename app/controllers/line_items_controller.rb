@@ -44,6 +44,9 @@ class LineItemsController < ApplicationController
 
   # PATCH/PUT /line_items/1 or /line_items/1.json
   def update
+
+    # params[:option] == "minus" ? @line_item = @cart.delete_product(product) : @line_item
+
     respond_to do |format|
       if @line_item.update(line_item_params)
         format.html { redirect_to @line_item, notice: "Line item was successfully updated." }
