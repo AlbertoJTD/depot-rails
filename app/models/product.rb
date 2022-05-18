@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   has_many :line_items
+  has_many :order, through: :line_items
 
   before_destroy :ensure_not_referenced_by_any_line_item
   #Valitating fields
