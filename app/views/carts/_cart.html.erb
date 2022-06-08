@@ -19,6 +19,19 @@
       <%= button_to 'Empty cart', cart, method: :delete,
       data: { confirm: 'Are you sure?' } %>
 
+      <button class="actions" onclick=trackGetIntouch() >
+        Empty cart 2
+      </button>
+
+      <script>
+      function trackGetIntouch() {
+        analytics.track("Empty cart button clicked", {
+          action: "button"
+          name: "Albert"
+        }); 
+      }
+      </script>
+
       <% if request.path != "/orders/new" %>
         <%= button_to 'Checkout', new_order_path, method: :get, class: "checkout" %>
       <% end %>
