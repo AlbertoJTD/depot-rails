@@ -87,7 +87,8 @@ class OrdersController < ApplicationController
       elsif order_params[:pay_type] == "Check"
         params.require(:order).permit(:routing_number, :account_number)
       elsif order_params[:pay_type] == "Purchase order"
-        params.require(:order).permit(:po_number) else
+        params.require(:order).permit(:po_number)
+      else
         {}
       end
     end
