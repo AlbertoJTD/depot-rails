@@ -93,6 +93,7 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
+    matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.1)
     mini_portile2 (2.6.1)
@@ -147,6 +148,7 @@ GEM
       thor (~> 1.0)
     rake (13.0.6)
     regexp_parser (2.1.1)
+    rexml (3.2.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -210,11 +212,13 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   jbuilder (~> 2.7)
+  matrix (~> 0.4.2)
   pg (~> 1.1)
   pry-rails
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4, >= 6.1.4.1)
+  rexml
   sass-rails (>= 6)
   selenium-webdriver
   turbolinks (~> 5)
@@ -227,4 +231,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.2.32
+   2.3.16
