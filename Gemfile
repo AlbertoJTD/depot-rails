@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "matrix", "~> 0.4.2"
 gem 'rexml'
+
+gem 'net-smtp'
