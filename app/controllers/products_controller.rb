@@ -45,8 +45,8 @@ class ProductsController < ApplicationController
         @products = Product.all.order(:title)
         @product_updated = @product.id
         
-        #ActionCable.server.broadcast 'products',
-         # {html: render_to_string('store/index', layout: false) }
+        ActionCable.server.broadcast 'products',
+           {html: render_to_string('store/index', layout: false) }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @product.errors, status: :unprocessable_entity }
