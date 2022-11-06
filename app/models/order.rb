@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: orders
+#
+#  id         :bigint           not null, primary key
+#  address    :text
+#  email      :string
+#  name       :string
+#  pay_type   :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 require 'pago'
 
 class Order < ApplicationRecord
