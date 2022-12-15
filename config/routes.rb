@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :admin, only: :index
+  resources :sessions, only: [:new, :create, :destroy]
   resources :users
   scope "(:locale)", defaults: {locale: 'en'}, locale: /en|es/  do
     # scope "/:locale", defaults: {locale: 'en'}, constraints: {locale: /en | es/ } do
