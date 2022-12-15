@@ -10,9 +10,9 @@
 #
 
 one:
-  name: MyString
+  name: Dave
   password_digest: <%= BCrypt::Password.create('secret') %>
 
 two:
-  name: MyString
+  name: John
   password_digest: <%= BCrypt::Password.create('secret') %>
