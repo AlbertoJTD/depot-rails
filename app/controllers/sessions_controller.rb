@@ -5,9 +5,11 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(name: params[:name])
-    if user.try(:authenticate, params[:password])
+    if user.try(:authenticate, params[:password]) && User.count.positive?
       session[:user_id] = user.id
       redirect_to admin_url
+    elsif User.count.zero?
+      redirect_to new_user_path
     else
       redirect_to login_url, alert: "Invalid user/password combination"
     end
