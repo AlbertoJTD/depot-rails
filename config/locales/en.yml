@@ -45,6 +45,7 @@ en:
       visits: Number of times vistited this page
       title_html: "Your Pragmatic Catalog"
       add_html: "Add to Cart"
+      times: times
   carts:
     cart:
       title: "Your Cart"

@@ -14,6 +14,7 @@ es:
       visits: Numero de veces que se ha visitado esta pagina
       title_html: "Su Cat&aacute;logo de Pragmatic"
       add_html: "A&ntilde;adir al Carrito"
+      times: veces
   carts:
     cart:
       title: "Carrito de la Compra"
