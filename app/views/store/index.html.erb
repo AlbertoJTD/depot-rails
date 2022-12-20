@@ -2,7 +2,7 @@
     <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<h1> <%= t('.title_html') %> <%= session[:counter] > 5  ?  "- - - - Number of times vistited this page: #{session[:counter]} times" : ""%> </h1>
+<h1> <%= t('.title_html') %> <%= session[:counter] > 5  ?  "- - - - #{t('.visits')}: #{session[:counter]} times" : ""%> </h1>
 
 <ul class="catalog">
   <% cache @products do %>

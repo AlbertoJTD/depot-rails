@@ -36,13 +36,13 @@ en:
       questions: 'Questions'
       news: News
       contact: Contact
-      visits: Number of times vistited this page
       orders: Orders
       products: Products
       users: Users
       logout: Logout
   store:
     index:
+      visits: Number of times vistited this page
       title_html: "Your Pragmatic Catalog"
       add_html: "Add to Cart"
   carts:
