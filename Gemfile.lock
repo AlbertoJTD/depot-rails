@@ -85,10 +85,14 @@ GEM
     digest (3.1.0)
     erubi (1.10.0)
     ffi (1.15.4)
+    glob (0.4.0)
     globalid (0.5.2)
       activesupport (>= 5.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    i18n-js (4.2.0)
+      glob (>= 0.4.0)
+      i18n
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     loofah (2.12.0)
@@ -224,6 +228,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   capybara (>= 3.26)
+  i18n-js
   jbuilder (~> 2.7)
   matrix (~> 0.4.2)
   net-smtp
