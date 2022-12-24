@@ -40,17 +40,20 @@ en:
       products: Products
       users: Users
       logout: Logout
+
   store:
     index:
       visits: Number of times vistited this page
       title_html: "Your Pragmatic Catalog"
       add_html: "Add to Cart"
       times: times
+
   carts:
     cart:
       title: "Your Cart"
       empty: "Empty cart"
       checkout: "Checkout"
+
   number:
     currency:
       format:
@@ -59,6 +62,7 @@ en:
         separator: "."
         delimiter: ","
         format: "%u%n"
+
   orders:
     new:
       legend: "Please Enter Your Details"
@@ -82,3 +86,4 @@ en:
       purchase_order_pay_type:
         po_number: "PO #"
 
+  thanks: "Thank you for your order"
