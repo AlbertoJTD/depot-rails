@@ -1,24 +1,32 @@
-# README
+# The pragmatic bookshelf 📚
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application where you can upload your second-hand items
 
-Things you may want to cover:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/89556233/233820005-e2d690f2-351a-4ae4-a16f-bd644e0a0923.png" width="900" height="540" style="text-align:center;">
+</p>
 
-* Ruby version
 
-* System dependencies
+## Minimum requirements
+- Ruby 3.2.1
+- Rails 7.0.4
 
-* Configuration
+# Libraries
+- [PosgreSQL](https://www.postgresql.org/)
 
-* Database creation
+## Configuration
+1. Create the data base and run the migrations:
+```ruby
+rails db:create db:migrate
+```
 
-* Database initialization
+2. Install the gems
+```ruby
+bundle install
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Start the server
+After pre-configuring the application, use the following command to run the server:
+```ruby
+rails s
+```
