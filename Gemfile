@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.2.2'
 
 gem 'annotate'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
@@ -32,6 +32,11 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -42,6 +47,8 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'pry-rails'
   gem 'awesome_print'
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :test do
@@ -57,5 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "matrix", "~> 0.4.2"
 gem 'rexml'
-
 gem 'net-smtp'
+gem 'dotenv-rails'
