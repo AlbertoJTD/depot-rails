@@ -23,6 +23,7 @@ class Product < ApplicationRecord
 
   #Validates that the title is unique
   validates :title, uniqueness: true
+  validates :title, length: { minimum: 10 }
 
   #Validates the URL for images
   validates :image_url, allow_blank: true, format: {

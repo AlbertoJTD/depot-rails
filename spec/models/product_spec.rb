@@ -38,6 +38,11 @@ RSpec.describe Product, type: :model do
           expect(product).to be_valid
         end
       end
+
+      it 'with a title of a minimun of 10 characters' do
+        product = Product.new(title: 'My Book Title', description: 'yyy', image_url: 'zzz.jpg', price: 1)
+        expect(product).to be_valid
+      end
     end
 
     context 'invalid' do
@@ -97,6 +102,12 @@ RSpec.describe Product, type: :model do
           expect(product).to be_invalid
           expect(product.errors[:image_url]).to include('Must be a URL for GIF, JPG, JPEG or PNG image.')
         end
+      end
+
+      it 'with a title of less than 10 characters' do
+        product = Product.new(title: 'Hello', description: 'yyy', image_url: 'zzz.jpg', price: 1)
+        expect(product).to be_invalid
+        expect(product.errors[:title]).to include('is too short (minimum is 10 characters)')
       end
     end
   end
