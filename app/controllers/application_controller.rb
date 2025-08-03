@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
         logger.error flash.now[:notice]
       end
     end
-    
+
     # puts "Este es el lenguaje: #{params[:locale]}"
     # I18n.locale = params[:locale] || I18n.default_locale
   end

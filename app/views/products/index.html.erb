@@ -23,7 +23,7 @@
         <td class="description">
           <h1><%= product.title %></h1>
           <p>
-            <%= truncate(strip_tags(product.description),length: 80) %>
+            <%= truncate(strip_tags(product.description), length: 80) %>
           </p>
         </td>
 
@@ -32,7 +32,7 @@
             <li><%= link_to 'Show', product %></li>
             <li><%= link_to 'Edit', edit_product_path(product) %></li>
             <li>
-              <%= link_to 'Destroy',product,method: :delete,data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Destroy', product, method: :delete,data: { confirm: 'Are you sure?' } %>
             </li>
           </ul>
         </td>

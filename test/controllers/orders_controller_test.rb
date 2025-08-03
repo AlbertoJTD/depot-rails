@@ -52,7 +52,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_equal flash[:notice], 'Your cart is empty'
   end
 
-  test "should get new" do
+  test "should get new v2" do
     post line_items_url, params: { product_id: products(:ruby).id }
 
     get new_order_url
