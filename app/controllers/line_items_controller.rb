@@ -1,10 +1,10 @@
 class LineItemsController < ApplicationController
   skip_before_action :authorize, only: :create
-  
+
   include CurrentCart
   before_action :set_cart, only: [:create]
 
-  before_action :set_line_item, only: %i[ show edit update destroy ]
+  before_action :set_line_item, only: %i[show edit update destroy]
 
   # GET /line_items or /line_items.json
   def index
@@ -12,8 +12,7 @@ class LineItemsController < ApplicationController
   end
 
   # GET /line_items/1 or /line_items/1.json
-  def show
-  end
+  def show; end
 
   # GET /line_items/new
   def new
@@ -21,8 +20,7 @@ class LineItemsController < ApplicationController
   end
 
   # GET /line_items/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /line_items or /line_items.json
   def create
@@ -46,7 +44,6 @@ class LineItemsController < ApplicationController
 
   # PATCH/PUT /line_items/1 or /line_items/1.json
   def update
-
     # params[:option] == "minus" ? @line_item = @cart.delete_product(product) : @line_item
 
     respond_to do |format|
