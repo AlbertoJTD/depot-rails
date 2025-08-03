@@ -111,4 +111,24 @@ RSpec.describe Product, type: :model do
       end
     end
   end
+
+  describe 'destroy' do
+    context 'without line items' do
+      it 'destroys the product' do
+        product = Product.create!(title: 'My Book Title', description: 'yyy', image_url: 'zzz.jpg', price: 1)
+        expect { product.destroy }.to change(Product, :count).by(-1)
+      end
+    end
+
+    context 'with line items' do
+      it 'cannot destroy the product' do
+        product = Product.create!(title: 'My Book Title', description: 'yyy', image_url: 'zzz.jpg', price: 1)
+        line_item = LineItem.create!(product: product, quantity: 1)
+
+        expect(product.destroy).to be_falsey
+        expect { product.destroy }.to change(Product, :count).by(0)
+        expect(product.errors[:base]).to include('Line Items present')
+      end
+    end
+  end
 end
